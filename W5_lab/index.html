@@ -19,6 +19,10 @@
         table, td { 
             border:1px solid black
          }
+
+        thead {
+            border:1px solid black
+        } 
         
         </style>
 
@@ -36,11 +40,311 @@
         <table>
             <!--Table Head-->
             <thead>
+
+               
                 
             </thead>
 
             <!--Table Body-->
             <tbody>
+
+                <!--Top Line-->
+                <tr>
+                    <td>
+                        <label for="label"><b>Label</b></label>
+
+
+                    </td>
+                    <td>
+
+                        <label for="form"><b>Form Fields</b></label>
+
+                    </td>
+                </tr>
+                
+                 <!--Parent Name-->
+                 <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="gFirst">Parent/Guardian Name:</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+                        <input type="text" name="gFirst" id="gFirst" placeholder="First Name" maxlength="20" required><br>
+                        <input type="text" name="gLast" id="gLast" placeholder="Last Name" maxlength="20" required>
+
+                    </td>
+                    
+
+                </tr>
+
+                <!--Child Name-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="cFirst">Childs First Name:</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+                        <input type="text" name="cFirst" id="cFirst" placeholder="Child's First Name" required>
+                        
+
+                    </td>
+                    
+
+                </tr>
+
+                <!--Child Age-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="age">Childs Age:</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+                        <input type="number" name="age" id="age" value=3 required>
+                        
+
+                    </td>
+                    
+
+                </tr>
+
+                <!--Date and Time-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="dt"><b>Date and Time</b></label>
+
+                    </td>
+
+                                       
+
+                </tr>
+
+                <!--Date-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="date">Date</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+                        
+                        <input type="date" name="date" id="date" required>
+
+                    </td>
+                    
+
+                </tr>
+
+                <!--Start Time-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="time">Start Time:</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+                        
+                        <input type="time" name="time" id="time" required>
+
+                    </td>
+                    
+
+                </tr>
+
+                <!--Number of Guests-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="guests">Number of Guests</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+                        
+                        <input type="number" name="guests" id="guests" value="5">
+
+                    </td>
+                    
+
+                </tr>
+
+                <!--Food-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="food"><b>Food</b></label>
+
+                    </td>
+
+                                       
+
+                </tr>
+
+                <!--Size-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="size">Size</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+                        
+                        <input type="radio" name="size" id="size">sm
+                        <input type="radio" name="size" id="size">md
+                        <input type="radio" name="size" id="size">lg
+
+                    </td>
+                    
+
+                </tr>
+
+                <!--Drinks-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="drink">Drinks</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+                        
+                        <input type="checkbox" name="drink" id="drink">Coke<br>
+                        <input type="checkbox" name="drink" id="drink">Sprite<br>
+                        <input type="checkbox" name="drink" id="drink">Fruit Punch<br>
+                        <input type="checkbox" name="drink" id="drink">Lemonade<br>
+                        <input type="checkbox" name="drink" id="drink">Iced Tea<br>
+
+                        
+
+                    </td>
+                    
+
+                </tr>
+
+                <!--Cake-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="cake">Cake</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+                        
+                        <select name="cake" id="cake"><option>Chocolate</option><option>Vanilla</option><option>I'll bring my own</option></select>
+                        
+                        
+
+                        
+
+                    </td>
+                    
+
+                </tr>
+
+                <!--Decorations-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="deco"><b>Decorations</b></label>
+
+                    </td>
+
+                                       
+
+                </tr>
+
+                <!--Color Scheme-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="colors">Color Scheme</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+
+                        <p>Choose a color scheme for the party:</p>
+                        <input type="color" name="colors" id="colors">
+                        
+                        
+
+                        
+
+                    </td>
+                </tr>    
+
+                <!--Comments-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        <label for="comments">Additional Comments</label>
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+
+                        <textarea placeholder="Please add any additional comments here..."></textarea>
+                        
+                        
+
+                        
+
+                    </td>
+                </tr>
+
+                <!--Submit-->
+                <tr>
+                    <!-- make sure the for matches input's id and name (almost always)-->
+                    <td>
+                        
+
+                    </td>
+
+                    <!--Input-->
+
+                    <td>
+                        <input type="submit" value="SUBMIT!">
+                        
+
+
+                    </td>
+                    
+
+                </tr>
+
+                 
 
 
 
