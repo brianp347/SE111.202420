@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brian Pereira">
+    <meta name="description" content="W6 Lab">
+
+
+
+    <title>Week 6 Lab | Pay calculator</title>
+
+    <!--Styling Scetion-->
+
+    <style>
+
+    </style>
+
+</head>
+
+
+
+<body>
+    <h1>Week 6 Pay Calculator</h1>
+
+<!--Script Sart-->
+<script>
+
+    //Hours 
+    var hours= prompt(`Enter the amount of hours you work in two weeks:`)
+
+    hours= Number(hours)
+    console.log (hours.toFixed(2))
+
+    //Pay Rate
+    var rate= prompt(`Enter your hourly rate:$ `)
+
+    rate= Number(rate)
+    console.log (rate.toFixed(2))
+
+
+    //Gross Pay
+    var gross= Number(hours * rate)
+    console.log (gross.toFixed(2))
+
+    //Taxes
+
+    var tax= Number(gross * 0.20)
+    console.log (tax.toFixed(2))
+
+    //Net Pay
+    var net= Number(gross - tax)
+    console.log (net.toFixed(2))
+
+    //Display
+    alert (`Your Gross Pay Amount is: $${gross.toFixed(2)}\n Uncle Sam's Share: $${tax.toFixed(2)}\n Your Net Pay is: $${net.toFixed(2)}`)
+    console.log (gross.toFixed(2))
+    console.log (tax.toFixed(2))
+    console.log (net.toFixed(2))
+
+
+
+
+
+</script> <!--SCRIPT END-->
+
+
+    
+</body>
+
+
+</html>
