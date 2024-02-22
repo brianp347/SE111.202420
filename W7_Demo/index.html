@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" Content="Brian">
+    <meta name="description" content="W7 Demo">
+
+
+    <title>Week 7 Demo</title>
+
+
+</head>
+
+
+<body>
+
+    <form style="border:1px solid blue">
+
+        <table>
+
+            
+        </table>
+    
+    
+    
+    </form>
+
+    <script>
+
+
+        //We write JS here
+        //usingJS, select the body elment from the file
+        var body = document.querySelector('body') //specify the element you wish to select
+
+        console.log(body)
+
+        //once an HTML element has been stored to our JS, we can now inherintley access ALL of its attributes (properties)
+        //common attribute: id, name, class, value, source, type, href....
+
+        //look at the current body element's ID:
+        console.log(`Body ID: ${body.id}`)
+        //"the body attribute" -->this replaces with the value
+        body.id = "corpse"
+        console.log(`Body ID: ${body.id}`)
+        body.style.backgroundColor = "grey"
+
+        //.innerHTML --> this is the content between the open and close tags
+        //only available when the element has both <> and </>
+        //Elements without: img, input, hr, br, meta
+        body.innerHTML += `<h1>Hello World!</h1>`
+        //body.innerHTML = body.innerHTML + <h1>Hello World!</h1>
+        //count = count + 1 or/ = count += 1
+        console.log(body)
+
+
+        //select the h2 with an id of hello and store to the name hello
+
+        var hello = document.querySelector(`#hello`) //using the ID instead of tag name
+
+        //make the hello say goodbye
+        hello.innerHTML = `<i>Goodbye</i>`
+
+        //Event Handling with JS!
+        //add an event listner to the #enter-button element WITHOUT storing the elment
+        //takes 2 aruments
+        document.querySelector(`#enter-button`).addEventListener(`click`, formConfirm)
+
+        //Global Scope: name is recognizable "everywhere" after declaration , which means value is accessible "everywhere"; must be declared OUTSIDE OF A FUNCTION<h1>Hello World!</h1><h1>Hello World!</h1>
+
+
+        //below names are Global
+        var first = document.getElementById(`first`)
+        var last = document.getElementById(`last`)
+        var age = document.getElementById(`age`)
+
+        //store the #info element so you can write data to it in the function easily
+        var info = document.getElementById(`info`)
+
+        //show #first's id
+        console.log(`#first id: ${first.id}`)
+
+
+        function formConfirm(event)
+        {
+
+            //reset the info.innerHTML every time the button is selceted
+            info.innerHTML = ``
+            //testing global vars --> show #first's id
+            console.log(`#first id: ${first.id}`)
+
+            //LOCAL SCOPE: name is only reconcgnizanle INSIDE of the function in which it is declared; the mAIN WAY to access values that are locally scoped is through function returns :[(passing by value)]
+
+            //testing local vars -->show #first's value
+            var fvalue = first.value  //local declaration
+            console.log(`#first value: ${fvalue}`)
+
+            var lvalue = last.value
+            var avalue = Number(age.value)
+
+            //Creating full name using fvalue and lvalue
+            var full = fvalue + `` + lvalue
+
+            //write the full name to the #info element by adding it to its innerHTML
+            info.innerHTML += `<p><b>Name:</b>${full}</p>`
+            info.innerHTML += `<p><b>Age:</b>${avalue} years</p>`
+
+            //conditions in JS
+            var activities = ``
+            if (avalue >= 21)
+            {
+                activities += `Drink`
+
+            }
+            if (avalue >= 18)
+            {
+                activities += `VOTE`
+
+            }
+            if (avalue >= 16)
+            {
+                activities += `Drive`
+
+            }
+            else 
+            {
+                activities += `Sorry you are too young for SHIT`
+
+            }
+
+            info.innerHTML += `<br>`
+            info.innerHTML += `<p>Based on your age, you are old enough to:<br>${activities} </p>`
+
+
+
+
+        }//formConfirm() CLOSE
+
+        //testing local vars
+        console.log(`#first value: ${fvalue}`)
+
+        document.querySelector(`#me`).addEventListener(`click`, clickMe)
+        var count = 0
+
+        function clickMe(e)
+        {
+            count++
+            if (count % 2 == 0)
+            {
+                document.querySelector(`#me`).style.color = "magenta"
+                document.querySelector(`#me`).style.color = "magenta"
+
+
+            }
+
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+    
+</body>
+
+
+</html>
