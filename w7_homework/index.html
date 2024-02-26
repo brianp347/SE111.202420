@@ -115,34 +115,36 @@
             console.log() all of these elements once complete
 
         */
-            var body = document.querySelector(`body`)
+            var body = document.querySelector(`#body`)
             console.log(body)
 
-            var h1 = document.querySelector(`h1`)
+            var h1 = document.querySelector(`#h1`)
             console.log(h1)
 
-            var first = document.querySelector(`first`)
+            var first = document.querySelector(`#first`)
             console.log(first)
 
-            var div = document.querySelector(`div`)
+            var div = document.querySelector(`#div`)
             console.log(div)
 
-            var last = document.querySelector(`last`)
+            var last = document.querySelector(`#last`)
             console.log(last)
 
-            var rate = document.querySelector(`rate`)
+            var rate = document.querySelector(`#rate`)
             console.log(rate)
 
-            var hours = document.querySelector(`hours`)
+            var hours = document.querySelector(`#hours`)
             console.log(hours)
 
-            var enter = document.getElementById(`enter-button`)
+            var enter = document.getElementById(`#enter-button`)
             console.log(enter)
 
-            var confirm = document.getElementById(`confirm-button`)
+            var confirm = document.getElementById(`#confirm-button`)
             console.log(confirm)
 
-            var info = document.getElmentById(`info`)
+            var info = document.getElementById(`info`)
+
+            
 
 
 
@@ -209,9 +211,10 @@
         console.log(`#netPay.id: ${netPay.id}`)
 
         info.innerHTML += `<p><b>Name:</b>${fullName}</p>`
-        info.innerHTML += `<p><b>Gross Pay:</b>$(${grossPay}</p>`
-        info.innerHTML += `<p><b>Tax Amount:</b>$${tAmount}</p>`
-        info.innerHTML += `<p><b>Net Pay:</b>$${netPay}</p>`
+        info.innerHTML += `<p><b>Gross Pay:</b>$${grossPay.toFixed(2)}</p>`
+        info.innerHTML += `<p><b>Tax Amount:</b>$${tAmount.toFixed(2)}</p>`
+        info.innerHTML += `<p><b>Net Pay:</b>$${netPay.toFixed(2)}</p>`
+       }
 
 
 
@@ -220,11 +223,32 @@
                 Once your file is working, add ONE INSTRUCTION above this comment, but inside of the formData(), that makes sure if the user resubmits the form without reloading the page, only the new form info is displayed
             */
 
-       }//formData()
+        //formData()
 
 
        function confirmData(event)
        {
+        var fvalue = first.value
+        var lvalue = last.value
+
+        var fullName = fvalue + `` + lvalue
+        console.log(`#fullName.id: ${fullName.id}`)
+
+        var rvalue = Number(rate.value)
+        var hvalue = Number(hours.value)
+
+        var grossPay = (rvalue * hvalue)
+        console.log(`#grossPay.id: ${grossPay.id}`)
+
+        var tvalue = .20
+
+        var tAmount = (grossPay * tvalue)
+        console.log(`#tAmount.id: ${tAmount.id}`)
+
+        var netPay = (grossPay - tAmount)
+        console.log(`#netPay.id: ${netPay.id}`)
+
+        alert(`Name: ${fullName}\nGross Pay: $${grossPay.toFixed(2)}\nTax Amount: $${tAmount.toFixed(2)}\nNet Pay: $${netPay.toFixed(2)}`)
 
        }//confirmData()
 
